@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas structure</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="icon-container">
+            <div class="icon selected" data-shape="brush">
+                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            </div>
+            <div class="icon" , data-shape="rectangle">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </div>
+            <div class="icon" data-shape="circle">
+                <i class="fa fa-circle-o" aria-hidden="true"></i>
+            </div>
+            <div class="icon" data-shape="line">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+            </div>
+            <div class="icon" data-shape="move">
+                <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
+            </div>
+            <div class="save-load-container">
+                <div class="save" data-shape="save">
+                    <i class="fa fa-save" aria-hidden="true"></i>
+                </div>
+                <div class="load" data-shape="load">
+                    <i class="fa fa-file" aria-hidden="true"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="line-size-color-container">
+            <div class="color">
+                Choose color:
+                <input type="color" id="mycolor" value="#000000" />
+            </div>
+            <div class="size-select" style="width:200px;">
+                Size:
+                <select value="size" id="selecter">
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                </select>
+            </div>
+        </div>
+        <div class="icon iii" data-shape="text">
+            <i class="fa fa-font" aria-hidden="true"></i>
+            <textarea id="textShape" name="textShape" rows="3" cols="10"
+                placeholder="Write something here..."></textarea>
+            <div class="text-container">
+                <select id="textFont" name="Font">
+                    <option value="TimesNewRoman">Times New Roman</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Comic Sans MS">Comic Sans</option>
+                </select>
+                <select id="fontSize" name="Size">
+                    <option value="4px">4</option>
+                    <option value="8px">8</option>
+                    <option value="12px" selected>12</option>
+                    <option value="16px">16</option>
+                    <option value="18px">18</option>
+                    <option value="24px">24</option>
+                    <option value="28px">28</option>
+                    <option value="32px">32</option>
+                    <option value="54px">54</option>
+                    <option value="72px">72</option>
+                </select>
+            </div>
+        </div>
+        </div>
+
+        <div class="undo" data-shape="undo">
+            <i class="fa fa-undo" aria-hidden="true"></i>
+        </div>
+        <div class="redo" data-shape="redo">
+            <i class="fa fa-rotate-right" aria-hidden="true"></i>
+        </div>
+    </nav>
+    <div class="container">
+        <canvas id="my-canvas" width="800" height="600">
+            Not supported
+        </canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" charset="utf-8"></script>
+    <script src="shapes.js" charset="utf-8"></script>
+    <script src="drawio.js" charset="utf-8"></script>
+    <script>
+        $(document).on("change", "#mycolor", function () {
+            $("input").attr('value', $(this).val());
+        });
+        $(document).on("change", "#selecter", function () {
+            $("select").attr('value', $(this).val());
+        });
+    </script>
+</body>
+
+</html>

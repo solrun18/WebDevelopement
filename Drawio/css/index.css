@@ -1,0 +1,110 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+#my-canvas {
+    background-color: aliceblue;
+    box-shadow: 1px 1px 1px;
+    margin: auto;
+    display: block;
+}
+
+.icon, .save, .load {
+    position: relative;
+    /*display: inline-block;*/
+    font-size: 4em;
+    float: right;
+    width: 100px;
+    top: 15px;
+    transition: color 0.5s;
+}
+
+.iii {
+    float: left;
+    /*border: 1px solid black;*/
+    padding-left: 10px;
+    /*display: inline-block;*/
+    width: 400px;
+}
+
+.icon:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.icon.selected {
+    color: yellow;
+}
+
+.navbar {
+    height: 100px;
+    background-color: rgba(50, 100, 200, 0.5);
+    border-bottom: solid 6px rgba(50, 100, 200, 1);
+    justify-content: space-between;
+}
+
+.save {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    width: 100px;
+    top: 15px;
+}
+
+.save:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.load {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    width: 70px;
+    top: 15px;
+}
+
+.load:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.redo {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    width: 70px;
+    top: 30px;
+}
+
+.redo:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.undo {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    width: 70px;
+    top: 30px;
+}
+
+.undo:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.line-size-color-container {
+    float: right;
+    padding-top: 10px;
+}
+
+.text-container {
+    display: inline-block;
+}
